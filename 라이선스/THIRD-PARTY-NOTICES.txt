@@ -1,0 +1,18 @@
+사진 정리 — Third-party notices
+
+This application includes Python, Tcl/Tk, Pillow, the PyInstaller bootloader,
+and modified static instances of Noto Sans KR. The installer uses Inno Setup.
+
+Noto Sans KR (400, 500, 700) is distributed under the SIL Open Font License 1.1.
+The bundled font instances have been renamed internally to Photo Organizer UI
+and Photo Organizer UI Medium. The original glyph designs are retained.
+Original source: https://github.com/google/fonts/tree/main/ofl/notosanskr
+Font-source SHA256: 194018e6b2b293a7964f037b25c0249ce1418bc9ab3c971060a03aa57861e252
+See NotoSansKR-OFL.txt for the copyright notice and full license.
+
+Python: Python-LICENSE.txt
+Tcl: Tcl-LICENSE.txt
+Tk: Tk-LICENSE.txt
+PyInstaller: PyInstaller-COPYING.txt (including the bootloader exception)
+Inno Setup: InnoSetup-LICENSE.txt
+Pillow and its bundled libraries: ../pillow-12.1.1.dist-info/licenses/LICENSE
