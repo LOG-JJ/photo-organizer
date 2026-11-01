@@ -1,0 +1,24 @@
+# Python / local development
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.env
+.env.*
+
+# Build output and release installers
+.build/
+build/
+dist/
+배포/*.exe
+*.log
+
+# Temporary QA fixtures
+검증/pair_launcher_*/
+
+# Editor / OS files
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
