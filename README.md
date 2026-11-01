@@ -45,9 +45,9 @@
 
 ## 자세한 사용법
 
-- [날짜별 정리](사용법/사진_날짜별_정리_사용법.txt)
-- [파일 분류](사용법/파일_분류_사용법.txt)
-- [RAW·JPG 정리](사용법/RAW_JPG_짝없는파일_정리_사용법.txt)
+- [날짜별 정리](docs/usage/사진_날짜별_정리_사용법.txt)
+- [파일 분류](docs/usage/파일_분류_사용법.txt)
+- [RAW·JPG 정리](docs/usage/RAW_JPG_짝없는파일_정리_사용법.txt)
 
 ## 소스 실행
 
@@ -55,7 +55,7 @@ Windows와 Python 3.12 64비트가 필요합니다. 프로젝트 폴더에서 �
 
 ```powershell
 py -3.12 -m pip install Pillow==12.1.1
-py -3.12 photo_app.py
+py -3.12 -B run.py
 ```
 
 ## 설치 파일 빌드
@@ -63,19 +63,23 @@ py -3.12 photo_app.py
 Python 3.12 64비트와 Inno Setup 6.7 이상을 준비한 뒤 실행합니다.
 
 ```powershell
-.\패키징\build.ps1 -InnoCompiler "C:\Program Files (x86)\Inno Setup 6\ISCC.exe"
+.\packaging\build.ps1 -InnoCompiler "C:\Program Files (x86)\Inno Setup 6\ISCC.exe"
 ```
 
-결과는 `배포/PhotoOrganizer-Setup.exe`에 저장됩니다. 수정 시 같은 파일을 교체합니다.
+결과는 `dist/PhotoOrganizer-Setup.exe`에 저장됩니다. 수정 시 같은 파일을 교체합니다.
 글꼴·아이콘·사용법·제3자 라이선스도 패키지에 포함됩니다.
 
 검증은 실제 사진 대신 임시 파일로 실행합니다.
 
 ```powershell
-py -3.12 -X utf8 -m unittest discover -s 검증 -p "test_*.py"
+py -3.12 -B tools/dev.py test
+py -3.12 -B tools/dev.py verify
 ```
 
 ## 제3자 구성 요소
 
 Python, Tcl/Tk, Pillow, PyInstaller, Inno Setup, Noto Sans KR를 사용합니다.
-관련 고지와 라이선스는 [라이선스 폴더](라이선스/THIRD-PARTY-NOTICES.txt)에 있습니다.
+관련 고지와 라이선스는 [라이선스 폴더](licenses/THIRD-PARTY-NOTICES.txt)에 있습니다.
+
+개발 코드 위치와 명령은 [개발 안내](docs/DEVELOPMENT.md)를 참고하세요.
+임시 산출물·검증 결과·빌드 캐시는 `.work/` 한 곳에 생성되며 Git과 배포에서 제외됩니다.

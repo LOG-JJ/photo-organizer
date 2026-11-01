@@ -1,4 +1,9 @@
-# Python / local development
+# All generated development artifacts (fixtures, results, previews, caches).
+/.work/
+# Only the final installer is exported here; upload it through Releases.
+/dist/
+
+# Defensive exclusions for editor-driven commands.
 __pycache__/
 *.py[cod]
 .venv/
@@ -10,12 +15,11 @@ venv/
 # Build output and release installers
 .build/
 build/
-dist/
-배포/*.exe
 *.log
 
-# Temporary QA fixtures
-검증/pair_launcher_*/
+.coverage
+htmlcov/
+*.tmp
 
 # Editor / OS files
 .vscode/
