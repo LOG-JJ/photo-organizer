@@ -6,8 +6,6 @@
 
 **날짜별 · 종류별 · RAW/JPG — 사진 정리를 한곳에서.**
 
-### [⬇️ Windows 설치 파일 다운로드](https://github.com/LOG-JJ/photo-organizer/releases/latest/download/PhotoOrganizer-Setup.exe)
-
 Windows 10 · 11 / 64비트 · 🐍 Python 설치 불필요
 
 </div>
